@@ -6,17 +6,46 @@ using Newtonsoft.Json.Linq;
 
 namespace Client
 {
-    internal class Program
-    {
-        private static async Task Main(string[] args)
-        {
+	internal class Program
+	{
+		private static async Task Main(string[] args)
+		{
+			using (var client = await CreateAuthenticatedClient())
+			{
+				if (client == null)
+				{
+					return;
+				}
+
+				await CallSecureApi(client);
+			}
+		}
+
+		private static async Task CallSecureApi(HttpClient client)
+		{
+			var response = await client.GetAsync("https://localhost:44349/job");
+			if (!response.IsSuccessStatusCode)
+			{
+				Console.WriteLine(response.StatusCode);
+			}
+			else
+			{
+				var content = await response.Content.ReadAsStringAsync();
+				Console.WriteLine(JArray.Parse(content));
+			}
+
+			response.Dispose();
+		}
+
+		private static async Task<HttpClient> CreateAuthenticatedClient()
+		{
 			// discover endpoints from metadata
 			var client = new HttpClient();
 			var disco = await client.GetDiscoveryDocumentAsync("https://localhost:44372");
 			if (disco.IsError)
 			{
 				Console.WriteLine(disco.Error);
-				return;
+				return null;
 			}
 
 			// request token
@@ -32,23 +61,13 @@ namespace Client
 			if (tokenResponse.IsError)
 			{
 				Console.WriteLine(tokenResponse.Error);
-				return;
+				return null;
 			}
 
 			Console.WriteLine(tokenResponse.Json);
 
 			client.SetBearerToken(tokenResponse.AccessToken);
-
-			var response = await client.GetAsync("https://localhost:44349/job");
-			if (!response.IsSuccessStatusCode)
-			{
-				Console.WriteLine(response.StatusCode);
-			}
-			else
-			{
-				var content = await response.Content.ReadAsStringAsync();
-				Console.WriteLine(JArray.Parse(content));
-			}
+			return client;
 		}
-    }
+	}
 }
