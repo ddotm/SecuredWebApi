@@ -23,7 +23,7 @@ namespace IdentityServer
 					DisplayName = "Secured Web API",
 					Scopes = new List<Scope>
 					{
-						new Scope("securedWebApi")
+						new Scope("securedWebApiScope")
 					}
 				}
 			};
@@ -35,18 +35,18 @@ namespace IdentityServer
 			{
 				new Client
 				{
-					ClientId = "client",
+					ClientId = "securedWebApiClientId",
 					// secret for authentication
 					ClientSecrets =
 					{
-						new Secret("secret".Sha256())
+						new Secret("super-secret-password".Sha256())
 					},
 
 					// no interactive user, use the clientid/secret for authentication
 					AllowedGrantTypes = GrantTypes.ClientCredentials,
 
 					// scopes that client has access to
-					AllowedScopes = {"securedWebApi" }
+					AllowedScopes = { "securedWebApiScope" }
 				}
 			};
 		}

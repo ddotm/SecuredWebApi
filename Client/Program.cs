@@ -24,9 +24,9 @@ namespace Client
 			{
 				Address = disco.TokenEndpoint,
 
-				ClientId = "client",
-				ClientSecret = "secret",
-				Scope = "securedWebApi"
+				ClientId = "securedWebApiClientId",
+				ClientSecret = "super-secret-password",
+				Scope = "securedWebApiScope"
 			});
 
 			if (tokenResponse.IsError)
