@@ -12,7 +12,7 @@ namespace Client
         {
 			// discover endpoints from metadata
 			var client = new HttpClient();
-			var disco = await client.GetDiscoveryDocumentAsync("http://localhost:5000");
+			var disco = await client.GetDiscoveryDocumentAsync("https://localhost:44372");
 			if (disco.IsError)
 			{
 				Console.WriteLine(disco.Error);
@@ -39,7 +39,7 @@ namespace Client
 
 			client.SetBearerToken(tokenResponse.AccessToken);
 
-			var response = await client.GetAsync("http://localhost:18080/job");
+			var response = await client.GetAsync("https://localhost:44349/job");
 			if (!response.IsSuccessStatusCode)
 			{
 				Console.WriteLine(response.StatusCode);
