@@ -24,7 +24,7 @@ namespace IdentityServer
 				.AddInMemoryApiResources(Config.GetApis())
 				.AddInMemoryClients(Config.GetClients());
 
-			if (Environment.IsDevelopment())
+			if (Environment.IsDevelopment() || Environment.IsEnvironment("Local"))
 			{
 				builder.AddDeveloperSigningCredential();
 			}
