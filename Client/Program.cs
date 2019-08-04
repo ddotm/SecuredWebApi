@@ -39,7 +39,7 @@ namespace Client
 
 			client.SetBearerToken(tokenResponse.AccessToken);
 
-			var response = await client.GetAsync("http://localhost:18080/jobs");
+			var response = await client.GetAsync("http://localhost:18080/job");
 			if (!response.IsSuccessStatusCode)
 			{
 				Console.WriteLine(response.StatusCode);
