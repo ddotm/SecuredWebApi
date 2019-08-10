@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 
 namespace IdentityServer
 {
@@ -34,14 +33,20 @@ namespace IdentityServer
 				.AddInMemoryApiResources(Config.GetApis())
 				.AddInMemoryClients(Config.GetClients());
 
-			if (HostingEnvironment.IsDevelopment() || HostingEnvironment.IsEnvironment("Local"))
-			{
-				builder.AddDeveloperSigningCredential();
-			}
-			else
-			{
-				throw new Exception("need to configure key material");
-			}
+			// Dev RSA key provided by IdentityServer4
+			// if (HostingEnvironment.IsDevelopment() || HostingEnvironment.IsEnvironment("Local"))
+			// {
+			// 	
+			// 	builder.AddDeveloperSigningCredential();
+			// }
+			// else
+			// {
+			// 	throw new Exception("need to configure key material");
+			// }
+
+			// In-memory RSA key creation and assignment to IdentityServer
+			var rsaKey = Crypto.GenerateRsaKey();
+			builder.AddSigningCredential(rsaKey);
 
 			// DI
 			// Application
