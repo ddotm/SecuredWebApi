@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
@@ -7,11 +9,19 @@ namespace IdentityServer
 {
 	public class Startup
 	{
-		public IHostingEnvironment Environment { get; }
+		public IConfiguration Configuration { get; }
+		public IHostingEnvironment HostingEnvironment { get; }
 
-		public Startup(IHostingEnvironment environment)
+		public Startup(IHostingEnvironment environment, IConfiguration configuration)
 		{
-			Environment = environment;
+			HostingEnvironment = environment;
+
+			var builder = new ConfigurationBuilder()
+				.SetBasePath(HostingEnvironment.ContentRootPath)
+				.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+				.AddJsonFile($"appsettings.{HostingEnvironment.EnvironmentName}.json", optional: true, true)
+				.AddEnvironmentVariables();
+			Configuration = builder.Build();
 		}
 
 		public void ConfigureServices(IServiceCollection services)
@@ -24,7 +34,7 @@ namespace IdentityServer
 				.AddInMemoryApiResources(Config.GetApis())
 				.AddInMemoryClients(Config.GetClients());
 
-			if (Environment.IsDevelopment() || Environment.IsEnvironment("Local"))
+			if (HostingEnvironment.IsDevelopment() || HostingEnvironment.IsEnvironment("Local"))
 			{
 				builder.AddDeveloperSigningCredential();
 			}
@@ -32,11 +42,17 @@ namespace IdentityServer
 			{
 				throw new Exception("need to configure key material");
 			}
+
+			// DI
+			// Application
+			services.AddSingleton(HostingEnvironment);
+			services.AddSingleton(Configuration);
+			services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 		}
 
 		public void Configure(IApplicationBuilder app)
 		{
-			if (Environment.IsDevelopment())
+			if (HostingEnvironment.IsDevelopment())
 			{
 				app.UseDeveloperExceptionPage();
 			}
