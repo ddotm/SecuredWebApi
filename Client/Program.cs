@@ -21,22 +21,6 @@ namespace Client
 			}
 		}
 
-		private static async Task CallSecureApi(HttpClient client)
-		{
-			var response = await client.GetAsync("https://localhost:44349/job");
-			if (!response.IsSuccessStatusCode)
-			{
-				Console.WriteLine(response.StatusCode);
-			}
-			else
-			{
-				var content = await response.Content.ReadAsStringAsync();
-				Console.WriteLine(JArray.Parse(content));
-			}
-
-			response.Dispose();
-		}
-
 		private static async Task<HttpClient> CreateAuthenticatedClient()
 		{
 			// discover endpoints from metadata
@@ -52,7 +36,6 @@ namespace Client
 			var tokenResponse = await client.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
 			{
 				Address = disco.TokenEndpoint,
-
 				ClientId = "securedWebApiClientId",
 				ClientSecret = "super-secret-password",
 				Scope = "securedWebApiScope"
@@ -68,6 +51,22 @@ namespace Client
 
 			client.SetBearerToken(tokenResponse.AccessToken);
 			return client;
+		}
+
+		private static async Task CallSecureApi(HttpClient client)
+		{
+			var response = await client.GetAsync("https://localhost:44349/job");
+			if (!response.IsSuccessStatusCode)
+			{
+				Console.WriteLine(response.StatusCode);
+			}
+			else
+			{
+				var content = await response.Content.ReadAsStringAsync();
+				Console.WriteLine(JArray.Parse(content));
+			}
+
+			response.Dispose();
 		}
 	}
 }
