@@ -1,5 +1,7 @@
 pool:
   name: Hosted Windows Container
+  demands:
+  - msdeploy
 variables:
   BuildConfiguration: 'IdentityServer_Release'
 
