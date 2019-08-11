@@ -14,5 +14,5 @@ steps:
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build'
   inputs:
-    arguments: '--configuration $(BuildConfiguration) /p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true'
+    arguments: '--configuration $(BuildConfiguration) /p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:PublishProfile=Properties/PublishProfiles/IdentityServer_Publish.pubxml'
   timeoutInMinutes: 10
