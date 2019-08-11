@@ -3,6 +3,13 @@ pool:
 variables:
   BuildConfiguration: 'IdentityServer_Release'
 
+trigger:
+  batch: true
+  branches:
+    include: master
+  paths:
+    include: IdentityServer
+
 steps:
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build'
