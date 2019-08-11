@@ -6,9 +6,9 @@ variables:
 trigger:
   batch: true
   branches:
-    include: master
+    include: [master]
   paths:
-    include: IdentityServer
+    include: [IdentityServer]
 
 steps:
 - task: DotNetCoreCLI@2
