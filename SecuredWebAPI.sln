@@ -14,6 +14,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "builds", "builds", "{AD6591
 		IdentityServer_Build.yml = IdentityServer_Build.yml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureDeploys", "AzureDeploys", "{29EC4E4A-0882-4018-AA17-7F89CA6C1411}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{403D3749-1C63-4A24-A482-92955D266CEF}"
+	ProjectSection(SolutionItems) = preProject
+		lilipudra-ids_azure-deploy-script\deploy.ps1 = lilipudra-ids_azure-deploy-script\deploy.ps1
+		lilipudra-ids_azure-deploy-script\deploy.sh = lilipudra-ids_azure-deploy-script\deploy.sh
+		lilipudra-ids_azure-deploy-script\deployer.rb = lilipudra-ids_azure-deploy-script\deployer.rb
+		lilipudra-ids_azure-deploy-script\parameters.json = lilipudra-ids_azure-deploy-script\parameters.json
+		lilipudra-ids_azure-deploy-script\template.json = lilipudra-ids_azure-deploy-script\template.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +93,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{403D3749-1C63-4A24-A482-92955D266CEF} = {29EC4E4A-0882-4018-AA17-7F89CA6C1411}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BEAAC345-3A91-49B4-9ED0-C9FB631E9A4F}
