@@ -1,0 +1,30 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subscriptionId": {
+            "value": "16c82021-348e-4093-9418-b5c897710c5a"
+        },
+        "name": {
+            "value": "lilipudra-ids"
+        },
+        "location": {
+            "value": "Central US"
+        },
+        "hostingEnvironment": {
+            "value": ""
+        },
+        "hostingPlanName": {
+            "value": "ASP-Labs-824f"
+        },
+        "serverFarmResourceGroup": {
+            "value": "Labs"
+        },
+        "alwaysOn": {
+            "value": false
+        },
+        "currentStack": {
+            "value": "dotnetcore"
+        }
+    }
+}
