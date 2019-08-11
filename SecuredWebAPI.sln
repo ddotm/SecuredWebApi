@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "builds", "builds", "{AD65912A-0E9E-4915-89A5-369A692597C3}"
 	ProjectSection(SolutionItems) = preProject
-		IdentityServer_Build.yaml = IdentityServer_Build.yaml
+		IdentityServer_Build.yml = IdentityServer_Build.yml
 	EndProjectSection
 EndProject
 Global
