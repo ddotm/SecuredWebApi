@@ -15,7 +15,7 @@ steps:
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build'
   inputs:
-    arguments: '--configuration $(BuildConfiguration)'
+    arguments: '--configuration $(BuildConfiguration) /p:PackageLocation="$(build.artifactstagingdirectory)'
   timeoutInMinutes: 10
 
 - task: PublishBuildArtifacts@1
