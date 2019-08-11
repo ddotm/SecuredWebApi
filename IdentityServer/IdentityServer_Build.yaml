@@ -1,0 +1,11 @@
+pool:
+  name: Hosted Windows Container
+variables:
+  BuildConfiguration: 'IdentityServer_Release'
+
+steps:
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet build'
+  inputs:
+    arguments: '--configuration $(BuildConfiguration)'
+  timeoutInMinutes: 10
