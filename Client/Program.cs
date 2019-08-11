@@ -8,6 +8,9 @@ namespace Client
 {
 	internal class Program
 	{
+		private static readonly string IdentityServerUri = "https://localhost:44372";
+		private static readonly string ApiUri = "https://localhost:44349";
+
 		private static async Task Main(string[] args)
 		{
 			using (var client = await CreateAuthenticatedClient())
@@ -25,7 +28,7 @@ namespace Client
 		{
 			// discover endpoints from metadata
 			var client = new HttpClient();
-			var disco = await client.GetDiscoveryDocumentAsync("https://localhost:44372");
+			var disco = await client.GetDiscoveryDocumentAsync(IdentityServerUri);
 			if (disco.IsError)
 			{
 				Console.WriteLine(disco.Error);
@@ -55,7 +58,7 @@ namespace Client
 
 		private static async Task CallSecureApi(HttpClient client)
 		{
-			var response = await client.GetAsync("https://localhost:44349/job");
+			var response = await client.GetAsync($"{ApiUri}/job");
 			if (!response.IsSuccessStatusCode)
 			{
 				Console.WriteLine(response.StatusCode);
