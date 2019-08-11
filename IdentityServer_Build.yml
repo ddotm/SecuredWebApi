@@ -14,5 +14,5 @@ steps:
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build'
   inputs:
-    arguments: '--configuration $(BuildConfiguration)'
+    arguments: '--configuration $(BuildConfiguration) /p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true'
   timeoutInMinutes: 10
