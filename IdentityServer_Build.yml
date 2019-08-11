@@ -1,5 +1,5 @@
 pool:
-  name: Hosted Windows Container
+  name: Hosted Windows 2019 with VS2019
   demands:
   - msdeploy
 variables:
