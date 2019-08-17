@@ -1,3 +1,16 @@
+pipeline:
+  name: lilipudra-api-ci
+  resources:
+    repositories: api
+
+resources:
+  repositories:
+  - repository: api  # identifier (A-Z, a-z, 0-9, and underscore)
+    type: github  # github for GitHub
+    name: ddotm/SecuredWebApi  # repository name (format depends on `type`)
+    ref: refs/heads/master  # ref name to use, defaults to 'refs/heads/master'
+    endpoint: ddotm  # name of the service connection to use (for non-Azure Repos types)
+
 pool:
   name: Hosted Windows 2019 with VS2019
   demands:
