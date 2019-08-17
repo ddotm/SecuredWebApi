@@ -11,6 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "builds", "builds", "{AD65912A-0E9E-4915-89A5-369A692597C3}"
 	ProjectSection(SolutionItems) = preProject
+		Api_Build.yml = Api_Build.yml
 		IdentityServer_Build.yml = IdentityServer_Build.yml
 	EndProjectSection
 EndProject
@@ -27,6 +28,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityS
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Api_Release|Any CPU = Api_Release|Any CPU
+		Api_Release|x64 = Api_Release|x64
+		Api_Release|x86 = Api_Release|x86
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
@@ -38,6 +42,11 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52E0389C-3977-475A-BA80-2EB81DC99CC0}.Api_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52E0389C-3977-475A-BA80-2EB81DC99CC0}.Api_Release|x64.ActiveCfg = Release|Any CPU
+		{52E0389C-3977-475A-BA80-2EB81DC99CC0}.Api_Release|x64.Build.0 = Release|Any CPU
+		{52E0389C-3977-475A-BA80-2EB81DC99CC0}.Api_Release|x86.ActiveCfg = Release|Any CPU
+		{52E0389C-3977-475A-BA80-2EB81DC99CC0}.Api_Release|x86.Build.0 = Release|Any CPU
 		{52E0389C-3977-475A-BA80-2EB81DC99CC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{52E0389C-3977-475A-BA80-2EB81DC99CC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52E0389C-3977-475A-BA80-2EB81DC99CC0}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -56,6 +65,12 @@ Global
 		{52E0389C-3977-475A-BA80-2EB81DC99CC0}.Release|x64.Build.0 = Release|Any CPU
 		{52E0389C-3977-475A-BA80-2EB81DC99CC0}.Release|x86.ActiveCfg = Release|Any CPU
 		{52E0389C-3977-475A-BA80-2EB81DC99CC0}.Release|x86.Build.0 = Release|Any CPU
+		{E7CAFE06-A6A8-44B1-A6E6-E73D3F415B73}.Api_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7CAFE06-A6A8-44B1-A6E6-E73D3F415B73}.Api_Release|Any CPU.Build.0 = Release|Any CPU
+		{E7CAFE06-A6A8-44B1-A6E6-E73D3F415B73}.Api_Release|x64.ActiveCfg = Release|Any CPU
+		{E7CAFE06-A6A8-44B1-A6E6-E73D3F415B73}.Api_Release|x64.Build.0 = Release|Any CPU
+		{E7CAFE06-A6A8-44B1-A6E6-E73D3F415B73}.Api_Release|x86.ActiveCfg = Release|Any CPU
+		{E7CAFE06-A6A8-44B1-A6E6-E73D3F415B73}.Api_Release|x86.Build.0 = Release|Any CPU
 		{E7CAFE06-A6A8-44B1-A6E6-E73D3F415B73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E7CAFE06-A6A8-44B1-A6E6-E73D3F415B73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7CAFE06-A6A8-44B1-A6E6-E73D3F415B73}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -73,6 +88,11 @@ Global
 		{E7CAFE06-A6A8-44B1-A6E6-E73D3F415B73}.Release|x64.Build.0 = Release|Any CPU
 		{E7CAFE06-A6A8-44B1-A6E6-E73D3F415B73}.Release|x86.ActiveCfg = Release|Any CPU
 		{E7CAFE06-A6A8-44B1-A6E6-E73D3F415B73}.Release|x86.Build.0 = Release|Any CPU
+		{04A3A021-7F68-40CC-9643-515082C25E94}.Api_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04A3A021-7F68-40CC-9643-515082C25E94}.Api_Release|x64.ActiveCfg = Release|Any CPU
+		{04A3A021-7F68-40CC-9643-515082C25E94}.Api_Release|x64.Build.0 = Release|Any CPU
+		{04A3A021-7F68-40CC-9643-515082C25E94}.Api_Release|x86.ActiveCfg = Release|Any CPU
+		{04A3A021-7F68-40CC-9643-515082C25E94}.Api_Release|x86.Build.0 = Release|Any CPU
 		{04A3A021-7F68-40CC-9643-515082C25E94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{04A3A021-7F68-40CC-9643-515082C25E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04A3A021-7F68-40CC-9643-515082C25E94}.Debug|x64.ActiveCfg = Debug|Any CPU
