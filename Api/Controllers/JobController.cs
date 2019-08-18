@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace Api.Controllers
 {
-	[Route("job")]
+	[Produces("application/json")]
+	[Route("api/job")]
 	[Authorize]
 	public class JobController : ControllerBase
 	{

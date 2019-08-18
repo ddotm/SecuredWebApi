@@ -4,11 +4,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
 {
-	[Route("health")]
+	[Produces("application/json")]
+	[Route("api/health")]
     [AllowAnonymous]
     public class HealthController : ControllerBase
     {
-        [HttpGet("status")]
+	    [ProducesResponseType(200)]
+		[HttpGet("status")]
         public async Task<ActionResult<string>> HealthAsync()
         {
             return Ok("API is OK");
