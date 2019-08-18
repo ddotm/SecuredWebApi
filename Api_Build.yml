@@ -19,9 +19,11 @@ pool:
 trigger:
   batch: true
   branches:
-    include: [master]
+    include: 
+    - master
   paths:
-    include: [Api]
+    include:
+    - Api/*
 
 variables:
   solution: 'SecuredWebAPI.sln'
