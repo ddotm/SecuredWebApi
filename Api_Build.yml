@@ -1,7 +1,8 @@
-pipeline:
-  name: lilipudra-api-ci
-  resources:
-    repositories: api
+# ASP.NET Core API Build
+# pipeline properties
+name: lilipudra-api-ci
+resources:
+  repositories: api
 
 resources:
   repositories:
