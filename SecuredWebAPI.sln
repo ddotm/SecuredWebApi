@@ -26,6 +26,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityS
 		lilipudra-ids_azure-deploy-script\template.json = lilipudra-ids_azure-deploy-script\template.json
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{B348E722-D3FD-4485-BC78-8F85E4010A7C}"
+	ProjectSection(SolutionItems) = preProject
+		lilipudra-api_azure-deploy-script\deploy.ps1 = lilipudra-api_azure-deploy-script\deploy.ps1
+		lilipudra-api_azure-deploy-script\deploy.sh = lilipudra-api_azure-deploy-script\deploy.sh
+		lilipudra-api_azure-deploy-script\deployer.rb = lilipudra-api_azure-deploy-script\deployer.rb
+		lilipudra-api_azure-deploy-script\parameters.json = lilipudra-api_azure-deploy-script\parameters.json
+		lilipudra-api_azure-deploy-script\template.json = lilipudra-api_azure-deploy-script\template.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Api_Release|Any CPU = Api_Release|Any CPU
@@ -116,6 +125,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{403D3749-1C63-4A24-A482-92955D266CEF} = {29EC4E4A-0882-4018-AA17-7F89CA6C1411}
+		{B348E722-D3FD-4485-BC78-8F85E4010A7C} = {29EC4E4A-0882-4018-AA17-7F89CA6C1411}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BEAAC345-3A91-49B4-9ED0-C9FB631E9A4F}
