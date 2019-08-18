@@ -24,6 +24,7 @@ trigger:
   paths:
     include:
     - Api/*
+    - Api_Build.yml
 
 variables:
   solution: 'SecuredWebAPI.sln'
