@@ -27,50 +27,45 @@ variables:
   solution: 'SecuredWebAPI.sln'
   BuildPlatform: 'any cpu'
   BuildConfiguration: 'Api_Release'
-  NugetVersion: '4.4.1'
 
-stages:
-- stage: Build stage
-  jobs:
-  - job: Build job
-    steps:
-    - task: NuGetToolInstaller@1
-      displayName: 'Use NuGet $(NugetVersion)'
-      inputs:
-        versionSpec: $(NugetVersion)
+steps:
+- task: NuGetToolInstaller@1
+  displayName: 'Use NuGet 4.4.1'
+  inputs:
+    versionSpec: 4.4.1
 
-    - task: NuGetCommand@2
-      displayName: 'NuGet restore'
-      inputs:
-        restoreSolution: '$(solution)'
+- task: NuGetCommand@2
+  displayName: 'NuGet restore'
+  inputs:
+    restoreSolution: '$(solution)'
 
-    - task: VSBuild@1
-      displayName: 'Build solution $(solution)'
-      inputs:
-        solution: '$(solution)'
-        msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactstagingdirectory)\\"'
-        platform: '$(BuildPlatform)'
-        configuration: '$(BuildConfiguration)'
-        clean: true
+- task: VSBuild@1
+  displayName: 'Build solution $(solution)'
+  inputs:
+    solution: '$(solution)'
+    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactstagingdirectory)\\"'
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
+    clean: true
 
-    - task: VSTest@2
-      displayName: 'VsTest - testAssemblies'
-      inputs:
-        testAssemblyVer2: |
-         **\$(BuildConfiguration)\*test*.dll
-         !**\obj\**
-        platform: '$(BuildPlatform)'
-        configuration: '$(BuildConfiguration)'
+- task: VSTest@2
+  displayName: 'VsTest - testAssemblies'
+  inputs:
+    testAssemblyVer2: |
+     **\$(BuildConfiguration)\*test*.dll
+     !**\obj\**
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
 
-    - task: PublishSymbols@2
-      displayName: 'Publish symbols path'
-      inputs:
-        SearchPattern: '**\bin\**\*.pdb'
-        PublishSymbols: false
-      continueOnError: true
+- task: PublishSymbols@2
+  displayName: 'Publish symbols path'
+  inputs:
+    SearchPattern: '**\bin\**\*.pdb'
+    PublishSymbols: false
+  continueOnError: true
 
-    - task: PublishBuildArtifacts@1
-      displayName: 'Publish Artifact: drop'
-      inputs:
-        PathtoPublish: '$(build.artifactstagingdirectory)'
-      condition: succeededOrFailed()
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+  condition: succeededOrFailed()
