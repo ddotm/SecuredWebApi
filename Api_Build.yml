@@ -2,9 +2,6 @@
 # pipeline properties
 name: lilipudra-api-ci
 resources:
-  repositories: api
-
-resources:
   repositories:
   - repository: api  # identifier (A-Z, a-z, 0-9, and underscore)
     type: github  # github for GitHub
