@@ -31,8 +31,9 @@ namespace IdentityServer
 			var builder = services.AddIdentityServer()
 				.AddInMemoryIdentityResources(Config.GetIdentityResources())
 				.AddInMemoryApiResources(Config.GetApis())
-				.AddInMemoryClients(Config.GetClients());
-
+				.AddInMemoryClients(Config.GetClients())
+				.AddTestUsers(Config.GetUsers());
+			
 			// Dev RSA key provided by IdentityServer4
 			// if (HostingEnvironment.IsDevelopment() || HostingEnvironment.IsEnvironment("Local"))
 			// {
