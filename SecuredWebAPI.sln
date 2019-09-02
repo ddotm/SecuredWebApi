@@ -37,6 +37,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{B348E722-D3F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServerAspNetIdentity", "IdentityServerAspNetIdentity\IdentityServerAspNetIdentity.csproj", "{1C3C8CFB-DFA5-4626-9FAD-3134745AF72C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityManagement", "IdentityManagement\IdentityManagement.csproj", "{38A867C6-7110-47E3-8060-79F080741174}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Api_Release|Any CPU = Api_Release|Any CPU
@@ -145,6 +147,30 @@ Global
 		{1C3C8CFB-DFA5-4626-9FAD-3134745AF72C}.Release|x64.Build.0 = Release|Any CPU
 		{1C3C8CFB-DFA5-4626-9FAD-3134745AF72C}.Release|x86.ActiveCfg = Release|Any CPU
 		{1C3C8CFB-DFA5-4626-9FAD-3134745AF72C}.Release|x86.Build.0 = Release|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.Api_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.Api_Release|Any CPU.Build.0 = Release|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.Api_Release|x64.ActiveCfg = Release|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.Api_Release|x64.Build.0 = Release|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.Api_Release|x86.ActiveCfg = Release|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.Api_Release|x86.Build.0 = Release|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.Debug|x64.Build.0 = Debug|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.Debug|x86.Build.0 = Debug|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.IdentityServer_Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.IdentityServer_Release|Any CPU.Build.0 = Release|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.IdentityServer_Release|x64.ActiveCfg = Release|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.IdentityServer_Release|x64.Build.0 = Release|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.IdentityServer_Release|x86.ActiveCfg = Release|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.IdentityServer_Release|x86.Build.0 = Release|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.Release|x64.ActiveCfg = Release|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.Release|x64.Build.0 = Release|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.Release|x86.ActiveCfg = Release|Any CPU
+		{38A867C6-7110-47E3-8060-79F080741174}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
