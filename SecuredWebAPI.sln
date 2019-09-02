@@ -35,8 +35,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{B348E722-D3F
 		lilipudra-api_azure-deploy-script\template.json = lilipudra-api_azure-deploy-script\template.json
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityManagement", "IdentityManagement\IdentityManagement.csproj", "{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServerAspNetIdentity", "IdentityServerAspNetIdentity\IdentityServerAspNetIdentity.csproj", "{1C3C8CFB-DFA5-4626-9FAD-3134745AF72C}"
 EndProject
 Global
@@ -123,30 +121,6 @@ Global
 		{04A3A021-7F68-40CC-9643-515082C25E94}.Release|x64.Build.0 = Release|Any CPU
 		{04A3A021-7F68-40CC-9643-515082C25E94}.Release|x86.ActiveCfg = Release|Any CPU
 		{04A3A021-7F68-40CC-9643-515082C25E94}.Release|x86.Build.0 = Release|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.Api_Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.Api_Release|Any CPU.Build.0 = Release|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.Api_Release|x64.ActiveCfg = Release|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.Api_Release|x64.Build.0 = Release|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.Api_Release|x86.ActiveCfg = Release|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.Api_Release|x86.Build.0 = Release|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.Debug|x64.Build.0 = Debug|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.Debug|x86.Build.0 = Debug|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.IdentityServer_Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.IdentityServer_Release|Any CPU.Build.0 = Release|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.IdentityServer_Release|x64.ActiveCfg = Release|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.IdentityServer_Release|x64.Build.0 = Release|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.IdentityServer_Release|x86.ActiveCfg = Release|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.IdentityServer_Release|x86.Build.0 = Release|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.Release|x64.ActiveCfg = Release|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.Release|x64.Build.0 = Release|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.Release|x86.ActiveCfg = Release|Any CPU
-		{B5C8A1BF-ADEB-4614-ADF9-706723D5CD9A}.Release|x86.Build.0 = Release|Any CPU
 		{1C3C8CFB-DFA5-4626-9FAD-3134745AF72C}.Api_Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C3C8CFB-DFA5-4626-9FAD-3134745AF72C}.Api_Release|Any CPU.Build.0 = Release|Any CPU
 		{1C3C8CFB-DFA5-4626-9FAD-3134745AF72C}.Api_Release|x64.ActiveCfg = Release|Any CPU
